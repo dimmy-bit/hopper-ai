@@ -15,13 +15,16 @@
         {
           "key": "Cache-Control",
           "value": "public, max-age=0, must-revalidate"
-          {
+        }
+      ]
+    }
+  ],
   "builds": [
     {
-      "src": "vite.config.js",
+      "src": "frontend/vite.config.js",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "dist"
+        "distDir": "frontend/dist"
       }
     }
   ],
@@ -32,4 +35,3 @@
     }
   ]
 }
-
