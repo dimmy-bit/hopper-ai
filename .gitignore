@@ -9,7 +9,6 @@ __pycache__/
 .env.*.local
 
 # Build
-dist/
 build/
 *.egg-info/
 
