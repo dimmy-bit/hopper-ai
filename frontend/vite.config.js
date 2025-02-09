@@ -1,19 +1,9 @@
-{
-  "framework": "vite",
-  "buildCommand": "npm run build",
-  "outputDirectory": "frontend/dist",
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=0, must-revalidate"
-        }
-      ]
-    }
-  ],
-  "rewrites": [],
-  "redirects": [],
-  "routes": []
-}
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+
+export default defineConfig({
+  plugins: [react()],
+  build: {
+    outDir: 'frontend/dist',
+  },
+});
