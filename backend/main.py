@@ -20,7 +20,7 @@ app.add_middleware(
 )
 
 # OpenRouter API configuration
-OPENROUTER_API_KEY = os.getenv("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")
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
 
 class ChatMessage(BaseModel):
@@ -55,7 +55,7 @@ async def chat(message: ChatMessage):
             response = await client.post(
                 f"{OPENROUTER_BASE_URL}/chat/completions",
                 headers={
-                    "Authorization": f"Bearer {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}",
+                    "Authorization": f"Bearer {OPENROUTER_API_KEY}",
                     "HTTP-Referer": "http://localhost:5173",  # Your frontend URL
                     "Content-Type": "application/json"
                 },
